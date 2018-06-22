@@ -1,0 +1,1 @@
+﻿CREATE ROLE [FeedsExporter] AUTHORIZATION [dbo]

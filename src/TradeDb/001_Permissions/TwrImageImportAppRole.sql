@@ -1,0 +1,2 @@
+﻿CREATE ROLE [TwrImageImportApp] AUTHORIZATION [dbo];
+GO

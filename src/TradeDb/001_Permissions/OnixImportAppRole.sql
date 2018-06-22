@@ -1,0 +1,2 @@
+﻿CREATE ROLE [OnixImportApp] AUTHORIZATION [dbo];
+GO

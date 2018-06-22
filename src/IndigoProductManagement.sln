@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TradeDb", "TradeDb\TradeDb.sqlproj", "{E2D6824B-4B39-48DA-8173-CE94C45764DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2D6824B-4B39-48DA-8173-CE94C45764DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2D6824B-4B39-48DA-8173-CE94C45764DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2D6824B-4B39-48DA-8173-CE94C45764DF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E2D6824B-4B39-48DA-8173-CE94C45764DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2D6824B-4B39-48DA-8173-CE94C45764DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2D6824B-4B39-48DA-8173-CE94C45764DF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {638918F1-0031-4AB5-B2F9-189BA9875B36}
+	EndGlobalSection
+EndGlobal

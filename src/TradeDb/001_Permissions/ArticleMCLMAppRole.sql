@@ -1,0 +1,1 @@
+﻿CREATE ROLE [ArticleMCLMApp] AUTHORIZATION [dbo]

@@ -1,0 +1,20 @@
+﻿CREATE TABLE [dbo].[TradeBronteCoreArchive](
+	[PID] [decimal](12, 0) NOT NULL,
+	[Title] [nvarchar](255) NULL,
+	[Subtitle] [nvarchar](100) NULL,
+	[CurrencyTypeID] [varchar](3) NULL,
+	[ItemCost] [varchar](20) NULL,
+	[CostOverridden] [varchar](3) NULL,
+	[SourcePrice] [varchar](20) NULL,
+	[ListPrice] [varchar](20) NULL,
+	[ListPriceOverridden] [varchar](3) NULL,
+	[AdjustedPrice] [varchar](20) NULL,
+	[AdjustedPriceOverridden] [varchar](3) NULL,
+	[VendorID] [varchar](50) NULL,
+	[CostFactorID] [varchar](3) NULL,
+	[StatusID] [varchar](3) NULL,
+	[OnSaleDate] [varchar](20) NULL,
+	[IsDeleted] [varchar](3) NULL,
+	[FileName] [varchar](255) NULL,
+	[DateCreated] [datetime] NOT NULL
+) ON [PRIMARY]

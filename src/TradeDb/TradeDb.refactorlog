@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="d8db4633-1c7c-46d6-aad9-b3d7fbc49b9c" ChangeDateTime="10/06/2017 15:17:55">
+    <Property Name="ElementName" Value="[dbo].[ScratchPadDescriptionData].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ScratchPadDescriptionData]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ISBN" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="12994ee2-c991-4b12-ae3e-1fbbf468c092" ChangeDateTime="11/10/2017 21:19:55">
+    <Property Name="ElementName" Value="[dbo].[FeedExportSessionLog].[ErrorMessage]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FeedExportSessionLog]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="StatusMessage" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="50eb8cc0-c865-4818-bb8f-1bf0b497b31e" ChangeDateTime="12/06/2017 20:40:32">
+    <Property Name="ElementName" Value="[dbo].[FeedExportSeriesInvalid].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FeedExportSeriesInvalid]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ErrorId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0076e45b-54ca-49b4-b59b-7e0585d14b85" ChangeDateTime="12/08/2017 17:57:19">
+    <Property Name="ElementName" Value="[dbo].[FeedExportVendorsInvalid].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FeedExportVendorsInvalid]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ErrorId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6f6e3606-b741-4595-a63c-ee834224bac4" ChangeDateTime="12/08/2017 17:57:44">
+    <Property Name="ElementName" Value="[dbo].[FeedExportVendorsInvalid].[SeriesID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FeedExportVendorsInvalid]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SeriesId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a53e9ef0-3ffa-46ff-9054-6cac6cdb5651" ChangeDateTime="12/08/2017 18:00:41">
+    <Property Name="ElementName" Value="[dbo].[FeedExportVendorsInvalid].[SeriesId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FeedExportVendorsInvalid]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VendorId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e3302f04-4f56-4a6a-a420-eb2387bfa109" ChangeDateTime="12/08/2017 20:05:51">
+    <Property Name="ElementName" Value="[dbo].[FeedExportContributorsInvalid].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FeedExportContributorsInvalid]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ErrorId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f8d5aa80-5402-4644-9121-52a0fb638c71" ChangeDateTime="12/21/2017 20:51:11">
+    <Property Name="ElementName" Value="[dbo].[KoboSeries].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[KoboSeries]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SeriesId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ef263607-7eb7-4ddb-9527-f2d6838f053c" ChangeDateTime="12/21/2017 20:55:46">
+    <Property Name="ElementName" Value="[dbo].[KoboSeriesAssignment].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[KoboSeriesAssignment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EBookID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2ac19c11-8f64-49a8-8b77-cedafc2679b8" ChangeDateTime="12/19/2017 16:14:51">
+    <Property Name="ElementName" Value="[dbo].[TradeDataTimestamps].[DateChangedContributor]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TradeDataTimestamps]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateChangedContributorAny" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="115282c2-b32b-4892-9d80-b453833b93ee" ChangeDateTime="12/19/2017 20:37:52">
+    <Property Name="ElementName" Value="[dbo].[FeedExportProductAttributes].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FeedExportProductAttributes]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ChangeVersionId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="992185d6-74b2-40ea-a4f2-751fbea5849c" ChangeDateTime="01/05/2018 21:18:07">
+    <Property Name="ElementName" Value="[dbo].[FeedExportProductDescriptionsInvalid].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FeedExportProductDescriptionsInvalid]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ErrorId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7b8f8e19-48a8-4a8b-acd3-4f4ef78be31c" ChangeDateTime="01/15/2018 15:27:55">
+    <Property Name="ElementName" Value="[dbo].[refDescriptionTypes].[ExportDescriptionTypeId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[refDescriptionTypes]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ExportDescriptionTypeId " />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="55452e9d-ca88-4974-bcce-eb4350f1e98f" ChangeDateTime="01/15/2018 15:28:06">
+    <Property Name="ElementName" Value="[dbo].[refDescriptionTypes].[ExportDescriptionTypeId ]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[refDescriptionTypes]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ExportDescriptionTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4ebb1749-060d-43f3-bd27-7eaa4d4d7829" ChangeDateTime="01/23/2018 16:52:17">
+    <Property Name="ElementName" Value="[dbo].[FeedExportTaxonomyAssignmentInvalid].[ISBN13]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FeedExportTaxonomyAssignmentInvalid]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ISBN13UPC" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="41c0300b-e87a-4bfc-88d1-6748a567cc20" ChangeDateTime="01/23/2018 16:58:00">
+    <Property Name="ElementName" Value="[dbo].[FeedExportTaxonomyAssignment].[ISBN13]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FeedExportTaxonomyAssignment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ISBN13UPC" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4e0f2af9-eb84-4554-8084-69ad2373f776" ChangeDateTime="01/24/2018 21:31:23">
+    <Property Name="ElementName" Value="[dbo].[FeedExportTaxonomyAssignmentInvalid].[ISBN13UPC]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FeedExportTaxonomyAssignmentInvalid]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProductSku" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5bdd63d0-1d8c-4b56-aa43-f122eed545af" ChangeDateTime="02/13/2018 16:29:50">
+    <Property Name="ElementName" Value="[dbo].[CompetitorAggregation].[PID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[CompetitorAggregation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ISBN13" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="49b576c0-d15e-4288-9457-4bebcd9c3b34" ChangeDateTime="02/13/2018 16:30:30">
+    <Property Name="ElementName" Value="[dbo].[IndigoAggregation].[PID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[IndigoAggregation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ISBN13" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ad95a758-1260-4c3e-a2c2-c50083316b30" ChangeDateTime="02/16/2018 18:47:12">
+    <Property Name="ElementName" Value="[dbo].[BowkerAwards].[DateChanged]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[BowkerAwards]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateCreated" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="626ca3ea-4710-44b1-9010-7b1f628862e1" ChangeDateTime="02/21/2018 20:40:02">
+    <Property Name="ElementName" Value="[dbo].[KoboAggregation].[SourceBookId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[KoboAggregation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SourceEBookId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b8a3d8c2-33bc-4427-a729-a8305db6560f" ChangeDateTime="03/12/2018 17:30:07">
+    <Property Name="ElementName" Value="[dbo].[TradeContributors].[LastName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TradeContributors]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Title" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2e4a5270-0073-464b-833c-2a912d6145c1" ChangeDateTime="03/12/2018 17:49:26">
+    <Property Name="ElementName" Value="[dbo].[TradeDescriptionData].[DescriptionTypeId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TradeDescriptionData]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+</Operations>

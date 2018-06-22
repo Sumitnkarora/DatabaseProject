@@ -1,0 +1,14 @@
+CREATE TABLE [dbo].[OnixImportErrors]
+(
+	[ID] INT NOT NULL IDENTITY(1, 1) PRIMARY KEY CLUSTERED
+,	[FileID] INT NOT NULL
+,	[ErrorMessage] NVARCHAR(MAX) NOT NULL
+,	[ProductData] NVARCHAR(MAX) NULL
+,	[DateCreated] DATETIME2(3) NOT NULL DEFAULT(SYSDATETIME())
+,	[ExceptionDetail] NVARCHAR(MAX) NULL
+,	CONSTRAINT [FK_OnixImportErrors_OnixImportLog] FOREIGN KEY([FileID]) REFERENCES [dbo].[OnixImportLog]([ID])
+);
+GO
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON OnixImportErrors TO OnixImportApp;
+GO

@@ -1,0 +1,27 @@
+CREATE TABLE TWRImageUploadResults (
+	UPC VARCHAR(32) NOT NULL,
+	ImageIndex TINYINT NOT NULL,
+	ExportStatus TINYINT NOT NULL DEFAULT(0),
+	ErrorMessage NVARCHAR(MAX) NULL,
+	Hash BINARY(32) NULL,
+	DateItemLastExported DATETIME2(3) NULL,
+	DateItemCreated DATETIME2(3) NULL,
+	DateItemUpdated DATETIME2(3) NULL,
+	DateItemInError DATETIME2(3) NULL,
+	DateChanged DATETIME2(3) NOT NULL DEFAULT(SYSDATETIME()),
+	ChangedBy NVARCHAR(128) NOT NULL DEFAULT(SUSER_SNAME()),
+	CONSTRAINT PK_TWRImageUploadResults PRIMARY KEY CLUSTERED (UPC, ImageIndex)
+);
+GO
+
+CREATE NONCLUSTERED INDEX IX_TWRImageUploadResults_ExportStatus ON TWRImageUploadResults (ExportStatus);
+GO
+
+GRANT SELECT, UPDATE ON TWRImageUploadResults TO TwrImageExportApp;
+GO
+
+GRANT INSERT, UPDATE ON TWRImageUploadResults TO TwrImportApp;
+GO
+
+GRANT SELECT, INSERT, UPDATE ON TWRImageUploadResults TO TwrImageImportApp;
+GO

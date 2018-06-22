@@ -1,0 +1,18 @@
+CREATE TABLE [dbo].[OnixImportLog]
+(
+	[ID] INT NOT NULL IDENTITY(1, 1) PRIMARY KEY CLUSTERED
+,	[FileType] TINYINT NOT NULL
+,	[SAPVendorId] VARCHAR(20) NOT NULL
+,	[VSRCode] VARCHAR(20) NOT NULL
+,	[FileName] VARCHAR(255) NOT NULL
+,	[RecordsTotal] INT NULL
+,	[RecordsProcessed] INT NULL
+,	[RecordsError] INT NULL
+,	[ProcessStatus] TINYINT NOT NULL
+,	[ProcessStart] DATETIME2(3) NOT NULL DEFAULT(SYSDATETIME())
+,	[ProcessEnd] DATETIME2(3) NULL
+);
+GO
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON OnixImportLog TO OnixImportApp;
+GO

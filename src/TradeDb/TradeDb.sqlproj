@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>CatalogDb</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{e2d6824b-4b39-48da-8173-ce94c45764df}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>CatalogDb</RootNamespace>
+    <AssemblyName>CatalogDb</AssemblyName>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <ValidateCasingOnIdentifiers>False</ValidateCasingOnIdentifiers>
+    <IsChangeTrackingOn>True</IsChangeTrackingOn>
+    <ChangeTrackingRetentionPeriod>5</ChangeTrackingRetentionPeriod>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <ModelCollation>1033,CI</ModelCollation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="001_Permissions" />
+    <Folder Include="002_Schema" />
+    <Folder Include="002_Schema\Tables" />
+    <Folder Include="002_Schema\Views" />
+    <Folder Include="003_Data" />
+    <Folder Include="004_Functions" />
+    <Folder Include="005_StoredProcs" />
+    <Folder Include="001_Permissions\RoleMemberships" />
+    <Folder Include="002_Schema\Staging" />
+    <Folder Include="002_Schema\Legacy Views" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="CreateLogins">
+      <DefaultValue>1</DefaultValue>
+      <Value>$(SqlCmdVar__2)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="Environment">
+      <DefaultValue>DEV</DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="001_Permissions\RoleMemberships\1_QA.sql" />
+    <None Include="001_Permissions\RoleMemberships\8_STAGE.sql" />
+    <None Include="001_Permissions\RoleMemberships\9_PROD.sql" />
+    <Build Include="002_Schema\Tables\TradeDataPriority.sql" />
+    <Build Include="002_Schema\Tables\refRightsRegions.sql" />
+    <Build Include="002_Schema\Tables\TradeVendors.sql" />
+    <Build Include="002_Schema\Tables\TradeDataTimestamps.sql" />
+    <Build Include="002_Schema\Tables\TradeContributorData.sql" />
+    <Build Include="002_Schema\Tables\TradeContributors.sql" />
+    <Build Include="002_Schema\Tables\refContributorRoles.sql" />
+    <Build Include="002_Schema\Tables\refBisacSubjects.sql" />
+    <Build Include="002_Schema\Tables\TradeSubjects.sql" />
+    <Build Include="002_Schema\Tables\TradeEnhancedContent.sql" />
+    <Build Include="002_Schema\Tables\TradeCollectionData.sql" />
+    <Build Include="002_Schema\Tables\refDescriptionTypes.sql" />
+    <Build Include="002_Schema\Tables\TradeCollections.sql" />
+    <Build Include="002_Schema\Tables\refOnlineTaxonomy.sql" />
+    <Build Include="002_Schema\Views\FullOnlineTaxonomy.sql" />
+    <Build Include="002_Schema\Staging\stgTradeVendorsNoVSR.sql" />
+    <Build Include="002_Schema\Staging\stgTradeVendorsVSR.sql" />
+    <Build Include="005_StoredProcs\TradeVendorsImport.sql" />
+    <Build Include="002_Schema\Tables\refBindingMap.sql" />
+    <Build Include="002_Schema\Tables\refReturnFormatSAPMap.sql" />
+    <Build Include="002_Schema\Tables\refBisacToMCLMMap.sql" />
+    <Build Include="002_Schema\Tables\refLayoutModules.sql" />
+    <Build Include="002_Schema\Tables\refMerchandiseCategories.sql" />
+    <Build Include="002_Schema\Views\LayoutModules.sql" />
+    <Build Include="005_StoredProcs\UpdateLayoutModule.sql" />
+    <Build Include="005_StoredProcs\CreateLayoutModule.sql" />
+    <Build Include="005_StoredProcs\CreateMerchandiseCategory.sql" />
+    <Build Include="005_StoredProcs\UpdateMerchandiseCategory.sql" />
+    <Build Include="002_Schema\Views\MerchandiseCategories.sql" />
+    <Build Include="002_Schema\Tables\refBisacToOnlineTaxonomy.sql" />
+    <Build Include="004_Functions\GetMerchandiseCategoryFromMap.sql" />
+    <Build Include="004_Functions\GetLayoutModuleFromMap.sql" />
+    <None Include="003_Data\stgTradeVendorsNoVSR.sql" />
+    <None Include="003_Data\stgTradeVendorsVSR.sql" />
+    <Build Include="005_StoredProcs\TradeVendorsClearStaging.sql" />
+    <Build Include="002_Schema\Tables\refCountry.sql" />
+    <Build Include="002_Schema\Tables\refPaperCertificationType.sql" />
+    <Build Include="005_StoredProcs\spGetClassOfTrade.sql" />
+    <Build Include="005_StoredProcs\spGetCountryCodes.sql" />
+    <Build Include="005_StoredProcs\spGetPaperCertificationType.sql" />
+    <Build Include="005_StoredProcs\spGetVendorCodes.sql" />
+    <Build Include="005_StoredProcs\spGetSAPVendorInfo.sql" />
+    <Build Include="005_StoredProcs\spGetVSRCode.sql" />
+    <Build Include="005_StoredProcs\spGetLegacyID.sql" />
+    <Build Include="005_StoredProcs\spGetNOTESTATUSCODES.sql" />
+    <Build Include="005_StoredProcs\spGETNOTESBYPID.sql" />
+    <Build Include="002_Schema\Tables\refDescriptionStatusCodes.sql" />
+    <Build Include="002_Schema\Tables\refContentProviders.sql" />
+    <Build Include="005_StoredProcs\spGETNOTETYPES.sql" />
+    <Build Include="005_StoredProcs\spGETPROVIDERS.sql" />
+    <Build Include="005_StoredProcs\spINSERTNOTE.sql" />
+    <Build Include="005_StoredProcs\spUPDATENODE.sql" />
+    <Build Include="002_Schema\Tables\TradeClassOfTrade.sql" />
+    <Build Include="005_StoredProcs\spAddNotes.sql" />
+    <Build Include="002_Schema\Tables\refAudienceCodes.sql" />
+    <Build Include="002_Schema\Tables\refAudienceGrades.sql" />
+    <Build Include="002_Schema\Tables\refBisacBindingTypes.sql" />
+    <Build Include="002_Schema\Tables\refCurrencyTypes.sql" />
+    <Build Include="002_Schema\Tables\refLinearMeasurementUnits.sql" />
+    <Build Include="002_Schema\Tables\refLanguage.sql" />
+    <Build Include="002_Schema\Tables\refPublishers.sql" />
+    <Build Include="002_Schema\Tables\refBisacMediaTypes.sql" />
+    <Build Include="002_Schema\Tables\refReplacementCode.sql" />
+    <Build Include="002_Schema\Tables\refStatusCodes.sql" />
+    <Build Include="002_Schema\Tables\refMassMeasurementUnits.sql" />
+    <None Include="003_Data\refReplacementCode.sql" />
+    <Build Include="002_Schema\Tables\refHandlingIndicator.sql" />
+    <None Include="003_Data\refHandlingIndicator.sql" />
+    <Build Include="005_StoredProcs\uspUserStatusGet.sql" />
+    <Build Include="005_StoredProcs\uspVendorListGet.sql" />
+    <Build Include="002_Schema\Staging\stgDescriptionData.sql" />
+    <Build Include="002_Schema\Staging\stgCatalogImport.sql" />
+    <Build Include="002_Schema\Tables\FeedExportSyncVersion.sql" />
+    <Build Include="002_Schema\Tables\FeedExportSessionLog.sql" />
+    <Build Include="002_Schema\Tables\FeedExportSeries.sql" />
+    <Build Include="002_Schema\Tables\refFeedExportStatus.sql" />
+    <None Include="003_Data\refFeedExportStatus.sql" />
+    <Build Include="005_StoredProcs\exporter_LoadInitialData.sql" />
+    <Build Include="005_StoredProcs\exporter_Series_FetchSession.sql" />
+    <Build Include="005_StoredProcs\exporter_StartSession.sql" />
+    <Build Include="005_StoredProcs\exporter_Series_FinishSession.sql" />
+    <Build Include="002_Schema\Tables\BowkerAudienceRange.sql" />
+    <Build Include="002_Schema\Tables\BowkerAudiences.sql" />
+    <Build Include="002_Schema\Tables\BowkerAwardCodes.sql" />
+    <Build Include="002_Schema\Tables\BowkerAwards.sql" />
+    <Build Include="002_Schema\Tables\BowkerCategories.sql" />
+    <Build Include="002_Schema\Tables\BowkerWorks.sql" />
+    <Build Include="002_Schema\Staging\stgAudiences.sql" />
+    <Build Include="002_Schema\Staging\stgBowkerAudience.sql" />
+    <Build Include="002_Schema\Staging\stgBowkerAudienceRange.sql" />
+    <Build Include="002_Schema\Staging\stgBowkerContributor.sql" />
+    <Build Include="002_Schema\Staging\stgBowkerContributorRole.sql" />
+    <Build Include="002_Schema\Staging\stgBowkerFileImportLog.sql" />
+    <Build Include="002_Schema\Staging\stgBowkerONIXmessage.sql" />
+    <Build Include="002_Schema\Staging\stgBowkerOtherText.sql" />
+    <Build Include="002_Schema\Staging\stgBowkerPrize.sql" />
+    <Build Include="002_Schema\Staging\stgBowkerProduct.sql" />
+    <Build Include="002_Schema\Staging\stgBowkerProductIdentifier.sql" />
+    <Build Include="002_Schema\Staging\stgBowkerSubject.sql" />
+    <Build Include="002_Schema\Staging\stgBowkerWorkIdentifier.sql" />
+    <Build Include="002_Schema\Staging\stgCompetitorAggregation.sql" />
+    <Build Include="002_Schema\Tables\CompetitorAggregation.sql" />
+    <Build Include="002_Schema\Tables\IndigoAggregation.sql" />
+    <Build Include="005_StoredProcs\CompetitorAggregation_TruncateStaging.sql" />
+    <Build Include="005_StoredProcs\CompetitorAggregation_Update.sql" />
+    <Build Include="005_StoredProcs\IndigoAggregation_Update.sql" />
+    <Build Include="002_Schema\Tables\EBookWorks.sql" />
+    <Build Include="002_Schema\Staging\stgIngramPublisherMarketing.sql" />
+    <Build Include="005_StoredProcs\IngramAnnotation_Import.sql" />
+    <Build Include="005_StoredProcs\IngramAnnotation_TruncateStaging.sql" />
+    <Build Include="005_StoredProcs\IngramPublisherMarketing_Import.sql" />
+    <Build Include="005_StoredProcs\IngramPublisherMarketing_TruncateStaging.sql" />
+    <Build Include="002_Schema\Staging\stgIngramAnnotations.sql" />
+    <Build Include="005_StoredProcs\sp_BowkerUpload.sql" />
+    <Build Include="005_StoredProcs\spBowkerCleanupStaging.sql" />
+    <Build Include="005_StoredProcs\spBowkerUpdateImportLog.sql" />
+    <Build Include="005_StoredProcs\Catalog_ValidateCatalogData.sql" />
+    <Build Include="002_Schema\Staging\stgCatalogValidateData.sql" />
+    <Build Include="004_Functions\CalcISBN10CheckDigit.sql" />
+    <Build Include="004_Functions\CalcISBN13CheckDigit.sql" />
+    <Build Include="004_Functions\ISBN10toISBN13.sql" />
+    <Build Include="004_Functions\ISBN13toISBN10.sql" />
+    <Build Include="004_Functions\FindClassOfTradeDiscount.sql" />
+    <Build Include="004_Functions\IsSAPVendorValidate.sql" />
+    <Build Include="004_Functions\FindClassOfTradeCode.sql" />
+    <Build Include="004_Functions\FindClassOfTradeName.sql" />
+    <Build Include="004_Functions\FindSeriesTitle.sql" />
+    <Build Include="004_Functions\IsSAPVendorSeriesTitleValidate.sql" />
+    <Build Include="002_Schema\Tables\CatalogImportValidationON.sql" />
+    <Build Include="002_Schema\Tables\CatalogAuthoritySeries.sql" />
+    <Build Include="004_Functions\FindImprint.sql" />
+    <Build Include="004_Functions\IsSAPVendorImprintValidate.sql" />
+    <Build Include="002_Schema\Tables\CatalogAuthorityImprint.sql" />
+    <Build Include="002_Schema\Tables\CatalogImportStatFile.sql" />
+    <Build Include="002_Schema\Tables\CatalogImportUserException.sql" />
+    <Build Include="002_Schema\Tables\CatalogImportExceptions.sql" />
+    <Build Include="002_Schema\Tables\CatalogImportStatRow.sql" />
+    <Build Include="005_StoredProcs\Catalog_UpdateRowStats.sql" />
+    <Build Include="002_Schema\Staging\stgCatalogCOLValidateData.sql" />
+    <Build Include="002_Schema\Staging\stgCatalogCOLImport.sql" />
+    <Build Include="002_Schema\Tables\CatalogCOLUpdateExceptions.sql" />
+    <Build Include="002_Schema\Tables\CatalogBookUpdateData.sql" />
+    <Build Include="002_Schema\Tables\CatalogCOLUpdateArchive.sql" />
+    <Build Include="002_Schema\Tables\CatalogImportArchive.sql" />
+    <Build Include="002_Schema\Staging\stgArticleMCLMSAPKiosk.sql" />
+    <Build Include="005_StoredProcs\ArticleMCLM_UpdateFromSAPKiosk.sql" />
+    <Build Include="002_Schema\Tables\TradeArticleMCLM.sql" />
+    <Build Include="002_Schema\Tables\TradeArticleMCLMDeleted.sql" />
+    <Build Include="002_Schema\Tables\FeedExportContributors.sql" />
+    <Build Include="002_Schema\Tables\FeedExportProductDescriptions.sql" />
+    <Build Include="002_Schema\Tables\FeedExportTaxonomyAssignment.sql" />
+    <Build Include="002_Schema\Tables\FeedExportTaxonomyStructure.sql" />
+    <Build Include="002_Schema\Tables\FeedExportVendors.sql" />
+    <Build Include="005_StoredProcs\exporter_Contributors_FinishSession.sql" />
+    <Build Include="005_StoredProcs\exporter_ProductDescriptions_FetchSession.sql" />
+    <Build Include="005_StoredProcs\exporter_ProductDescriptions_FinishSession.sql" />
+    <Build Include="005_StoredProcs\exporter_RestartInitialize.sql" />
+    <Build Include="005_StoredProcs\exporter_TaxonomyAssignment_FetchSession.sql" />
+    <Build Include="005_StoredProcs\exporter_TaxonomyAssignment_FinishSession.sql" />
+    <Build Include="005_StoredProcs\exporter_TaxonomyStructure_FetchSession.sql" />
+    <Build Include="005_StoredProcs\exporter_TaxonomyStructure_FinishSession.sql" />
+    <Build Include="005_StoredProcs\exporter_Vendors_FetchSession.sql" />
+    <Build Include="005_StoredProcs\exporter_Vendors_FinishSession.sql" />
+    <Build Include="002_Schema\Staging\stgKoboBooks.sql" />
+    <Build Include="002_Schema\Staging\stgKoboCategories.sql" />
+    <Build Include="002_Schema\Staging\stgKoboContributors.sql" />
+    <Build Include="002_Schema\Staging\stgKoboDownloadable.sql" />
+    <Build Include="002_Schema\Staging\stgKoboFailedToProcessProducts.sql" />
+    <Build Include="002_Schema\Staging\stgKoboMarketAvailabilityDates.sql" />
+    <Build Include="002_Schema\Staging\stgKoboPrices.sql" />
+    <Build Include="002_Schema\Staging\stgKoboReadThisOn.sql" />
+    <Build Include="002_Schema\Staging\stgKoboRelatedProducts.sql" />
+    <Build Include="002_Schema\Staging\stgKoboSubscriptions.sql" />
+    <Build Include="002_Schema\Tables\EBookExclusions.sql" />
+    <Build Include="002_Schema\Tables\EBookExclusionsEBookID.sql" />
+    <Build Include="002_Schema\Tables\EBookExclusionsISBN.sql" />
+    <Build Include="002_Schema\Tables\EBookRelatedExclusions.sql" />
+    <Build Include="002_Schema\Tables\KoboBooks.sql" />
+    <Build Include="002_Schema\Tables\KoboCategories.sql" />
+    <Build Include="002_Schema\Tables\KoboContributors.sql" />
+    <Build Include="002_Schema\Tables\KoboDownloadable.sql" />
+    <Build Include="002_Schema\Tables\KoboFailedToProcessProducts.sql" />
+    <Build Include="002_Schema\Tables\KoboImportLog.sql" />
+    <Build Include="002_Schema\Tables\KoboMarketAvailabilityDates.sql" />
+    <Build Include="002_Schema\Tables\KoboPrices.sql" />
+    <Build Include="002_Schema\Tables\KoboReadThisOn.sql" />
+    <Build Include="002_Schema\Tables\KoboRelatedProducts.sql" />
+    <Build Include="002_Schema\Tables\KoboSubscriptions.sql" />
+    <Build Include="005_StoredProcs\uspKoboBooksClearStaging.sql" />
+    <Build Include="005_StoredProcs\uspKoboBooksUpload.sql" />
+    <Build Include="004_Functions\fnCalcISBN10CheckDigit.sql" />
+    <Build Include="004_Functions\fnCalcISBN13CheckDigit.sql" />
+    <Build Include="004_Functions\fnISBNtoISBN10.sql" />
+    <Build Include="004_Functions\fnISBNtoISBN13.sql" />
+    <Build Include="004_Functions\fnPIDToISBN10.sql" />
+    <Build Include="004_Functions\fnPIDToISBN13.sql" />
+    <Build Include="004_Functions\fnValidateISBN.sql" />
+    <Build Include="002_Schema\Tables\FeedExportSeriesInvalid.sql" />
+    <Build Include="005_StoredProcs\exporter_Series_InsertInvalid.sql" />
+    <Build Include="002_Schema\Tables\refRetailTaxonomy.sql" />
+    <Build Include="002_Schema\Tables\FeedExportTaxonomyStructureInvalid.sql" />
+    <Build Include="005_StoredProcs\exporter_TaxonomyStructure_InsertInvalid.sql" />
+    <Build Include="005_StoredProcs\exporter_Vendors_InsertInvalid.sql" />
+    <Build Include="002_Schema\Tables\FeedExportVendorsInvalid.sql" />
+    <Build Include="005_StoredProcs\exporter_Contributors_InsertInvalid.sql" />
+    <Build Include="002_Schema\Tables\FeedExportContributorsInvalid.sql" />
+    <Build Include="002_Schema\Staging\stgEBookDetails.sql" />
+    <Build Include="002_Schema\Staging\stgEBookRelatedISBNs.sql" />
+    <Build Include="002_Schema\Tables\EBookDetails.sql" />
+    <Build Include="002_Schema\Tables\EBookDetailsExceptions.sql" />
+    <Build Include="002_Schema\Tables\EBookISBNRange.sql" />
+    <Build Include="002_Schema\Views\FullRetailTaxonomy.sql" />
+    <None Include="003_Data\refRetailTaxonomy.sql" />
+    <Build Include="002_Schema\Tables\TradeBronteCoreArchive.sql" />
+    <Build Include="002_Schema\Tables\TradeBronteCoreExceptions.sql" />
+    <Build Include="002_Schema\Tables\TradeIndigoAttributes.sql" />
+    <Build Include="002_Schema\Tables\TradeStatFileProductsDB.sql" />
+    <Build Include="005_StoredProcs\uspCleanupStgTradeBronteCore.sql" />
+    <Build Include="005_StoredProcs\uspInsertTradeStatFile.sql" />
+    <Build Include="005_StoredProcs\uspProductsDBValidateCore.sql" />
+    <Build Include="002_Schema\Tables\BowkerMissingPID.sql" />
+    <Build Include="002_Schema\Staging\stgTradeBronteCore.sql" />
+    <Build Include="002_Schema\Tables\FeedExportProductAttributes.sql" />
+    <Build Include="002_Schema\Tables\KoboSeries.sql" />
+    <Build Include="002_Schema\Tables\KoboSeriesAssignment.sql" />
+    <Build Include="005_StoredProcs\exporter_ProductAttributes_FinishSession.sql" />
+    <Build Include="002_Schema\Tables\FeedExportProductAttributesInvalid.sql" />
+    <Build Include="005_StoredProcs\exporter_ProductAttributes_InsertInvalid.sql" />
+    <Build Include="005_StoredProcs\ArticleMCLM_TruncateStgArticleMCLMSAPKiosk.sql" />
+    <Build Include="002_Schema\Tables\FeedExportProductDescriptionsInvalid.sql" />
+    <Build Include="005_StoredProcs\exporter_ProductDescriptions_InsertInvalid.sql" />
+    <Build Include="002_Schema\Staging\stgTradeBooks.sql" />
+    <Build Include="002_Schema\Staging\stgTradeBooksImport.sql" />
+    <Build Include="002_Schema\Tables\TradeBooksArchive.sql" />
+    <Build Include="002_Schema\Tables\TradeBooksExceptions.sql" />
+    <Build Include="002_Schema\Tables\TradeBooksFilesStat.sql" />
+    <Build Include="005_StoredProcs\spTradeBooksCleanupStaging.sql" />
+    <Build Include="005_StoredProcs\spTradeBooksDataImport.sql" />
+    <Build Include="005_StoredProcs\spTradeBooksValidate.sql" />
+    <Build Include="005_StoredProcs\spTradeBooksUpdate.sql" />
+    <Build Include="005_StoredProcs\exporter_TaxonomyAssignment_InsertInvalid.sql" />
+    <Build Include="002_Schema\Tables\FeedExportTaxonomyAssignmentInvalid.sql" />
+    <Build Include="005_StoredProcs\exporter_ProductAttributes_FetchSession.sql" />
+    <Build Include="001_Permissions\FeedsExporterRole.sql" />
+    <Build Include="001_Permissions\TradeBooksAppRole.sql" />
+    <None Include="003_Data\refDiscountCodeMapping.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="001_Permissions\RoleMemberships\0_DEV.sql" />
+    <None Include="003_Data\refOnlineTaxonomy.sql" />
+    <None Include="003_Data\refBisacSubjects.sql" />
+    <None Include="003_Data\refContributorRoles.sql" />
+    <None Include="003_Data\refRightsRegions.sql" />
+    <None Include="003_Data\refBindingMap.sql" />
+    <None Include="003_Data\refReturnFormatSAPMap.sql" />
+    <None Include="003_Data\refBisacToMCLMMap.sql" />
+    <None Include="003_Data\refLayoutModules.sql" />
+    <None Include="003_Data\refMerchandiseCategories.sql" />
+    <None Include="003_Data\refBisacToOnlineTaxonomy.sql" />
+    <None Include="003_Data\refCountry.sql" />
+    <None Include="003_Data\refPaperCertificationType.sql" />
+    <None Include="003_Data\refContentProviders.sql" />
+    <None Include="003_Data\refDescriptionTypes.sql" />
+    <None Include="003_Data\refDescriptionStatusCodes.sql" />
+    <None Include="003_Data\refAudienceCodes.sql" />
+    <None Include="003_Data\refAudienceGrades.sql" />
+    <None Include="003_Data\refBisacBindingTypes.sql" />
+    <None Include="003_Data\refBisacMediaTypes.sql" />
+    <None Include="003_Data\refCurrencyTypes.sql" />
+    <None Include="003_Data\refLinearMeasurementUnits.sql" />
+    <None Include="003_Data\refLanguage.sql" />
+    <None Include="003_Data\refPublishers.sql" />
+    <None Include="003_Data\refStatusCodes.sql" />
+    <None Include="003_Data\refMassMeasurementUnits.sql" />
+    <None Include="003_Data\refBowkerAwardCodes.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="TradeDb.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="001_Permissions\AggregationImporterAppRole.sql" />
+    <Build Include="001_Permissions\ArticleMCLMAppRole.sql" />
+    <Build Include="001_Permissions\BowkerAppRole.sql" />
+    <Build Include="001_Permissions\CatalogImportAppRole.sql" />
+    <Build Include="001_Permissions\CoreFileImporterAppRole.sql" />
+    <Build Include="001_Permissions\COLUpdatesAppRole.sql" />
+    <Build Include="001_Permissions\IngramImportAppRole.sql" />
+    <Build Include="001_Permissions\KoboImporterAppRole.sql" />
+    <Build Include="005_StoredProcs\exporter_Mapping_GetLanguages.sql" />
+    <Build Include="002_Schema\Tables\KoboAggregation.sql" />
+    <Build Include="002_Schema\Tables\BowkerDescriptionData.sql" />
+    <Build Include="005_StoredProcs\spTradeBooksMoveInvalidStagingData.sql" />
+    <Build Include="001_Permissions\VendorImportAppRole.sql" />
+    <Build Include="005_StoredProcs\exporter_ProductAttributes_StartSession.sql" />
+    <Build Include="005_StoredProcs\exporter_Series_StartSession.sql" />
+    <Build Include="005_StoredProcs\exporter_ProductDescriptions_StartSession.sql" />
+    <Build Include="005_StoredProcs\exporter_Contributors_StartSession.sql" />
+    <Build Include="005_StoredProcs\exporter_Vendors_StartSession.sql" />
+    <Build Include="005_StoredProcs\exporter_TaxonomyAssignment_StartSession.sql" />
+    <Build Include="005_StoredProcs\exporter_TaxonomyStructure_StartSession.sql" />
+    <Build Include="005_StoredProcs\ChaptersNotesMerge.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_001_AudienceCodes.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_001_AudienceGrades.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_001_BISACBindingTypes.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_001_BISACSubjects.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_001_Publishers.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_009_Distributors.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_ChaptersNotes.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_CMN_ChaptersNotesStatusCodes.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_CMN_ChaptersNoteTypes.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_CMN_Language.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_CMN_MainSiteSubjectIDs.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_CMN_ProductCategorySubClasses.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_CMN_ProductCategoryTypes.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_CMN_ProductDataTypes.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_CMN_ProductDetails.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_CMN_ProductDetailTypes.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_CMN_ProductTypes.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_CMN_VendorDiscounts.sql" />
+    <Build Include="002_Schema\Legacy Views\tbl_IndigoAggregation.sql" />
+    <Build Include="002_Schema\Legacy Views\tblBisacToDeptToMerchCartMap.sql" />
+    <Build Include="002_Schema\Legacy Views\tblCatalogImport.sql" />
+    <Build Include="002_Schema\Legacy Views\tblClassOfTrade.sql" />
+    <Build Include="002_Schema\Legacy Views\tblClassOfTradeSAPVendor.sql" />
+    <Build Include="002_Schema\Legacy Views\tblSAPVendors.sql" />
+    <Build Include="002_Schema\Staging\stgTradeCoreAttributes.sql" />
+    <Build Include="002_Schema\Staging\stgTradeAlternateIdentifiers.sql" />
+    <Build Include="002_Schema\Staging\stgTradeCollections.sql" />
+    <Build Include="002_Schema\Staging\stgTradeCollectionData.sql" />
+    <Build Include="002_Schema\Staging\stgTradeContributors.sql" />
+    <Build Include="002_Schema\Staging\stgTradeContributorData.sql" />
+    <Build Include="002_Schema\Staging\stgTradeSubjects.sql" />
+    <Build Include="002_Schema\Staging\stgTradeEnhancedContent.sql" />
+    <Build Include="002_Schema\Staging\stgTradeSalesRights.sql" />
+    <Build Include="002_Schema\Staging\stgTradeSupplierInformation.sql" />
+    <Build Include="002_Schema\Staging\stgTradeSupplierPricing.sql" />
+    <Build Include="002_Schema\Tables\OnixImportErrors.sql" />
+    <Build Include="002_Schema\Tables\OnixImportLog.sql" />
+    <Build Include="005_StoredProcs\OnixImportClearErrors.sql" />
+    <Build Include="005_StoredProcs\OnixImportClearStaging.sql" />
+    <Build Include="005_StoredProcs\OnixImportLog_Start.sql" />
+    <Build Include="005_StoredProcs\OnixImportLog_Update.sql" />
+    <Build Include="005_StoredProcs\OnixImportProducts.sql" />
+    <Build Include="001_Permissions\OnixImportAppRole.sql" />
+    <None Include="003_Data\refAudienceCode.sql" />
+    <None Include="003_Data\refContentCode.sql" />
+    <None Include="003_Data\refContentType.sql" />
+    <None Include="003_Data\refIdentifierType.sql" />
+    <None Include="003_Data\refProductForm.sql" />
+    <None Include="003_Data\refProductFormDetail.sql" />
+    <None Include="003_Data\refPublishingStatus.sql" />
+    <None Include="003_Data\refReturnConditionCode.sql" />
+    <None Include="003_Data\refReturnConditionType.sql" />
+    <None Include="003_Data\refSubjectScheme.sql" />
+    <None Include="003_Data\refSupplierDiscountType.sql" />
+    <None Include="003_Data\refSupplierPriceType.sql" />
+    <None Include="003_Data\refSupplierRole.sql" />
+    <Build Include="002_Schema\Tables\refAudienceCode.sql" />
+    <Build Include="002_Schema\Tables\refCollectionType.sql" />
+    <Build Include="002_Schema\Tables\refContentCode.sql" />
+    <Build Include="002_Schema\Tables\refContentType.sql" />
+    <Build Include="002_Schema\Tables\refIdentifierType.sql" />
+    <Build Include="002_Schema\Tables\refProductAvailability.sql" />
+    <Build Include="002_Schema\Tables\refProductForm.sql" />
+    <Build Include="002_Schema\Tables\refProductFormDetail.sql" />
+    <Build Include="002_Schema\Tables\refProductFormToMediaBinding.sql" />
+    <Build Include="002_Schema\Tables\refProductFormToRetailCategorization.sql" />
+    <Build Include="002_Schema\Tables\refProductFormToSAPCategorization.sql" />
+    <Build Include="002_Schema\Tables\refProductStatusMapping.sql" />
+    <Build Include="002_Schema\Tables\refPublishingStatus.sql" />
+    <Build Include="002_Schema\Tables\refReturnConditionCode.sql" />
+    <Build Include="002_Schema\Tables\refReturnConditionType.sql" />
+    <Build Include="002_Schema\Tables\refSAPDiscountCode.sql" />
+    <Build Include="002_Schema\Tables\refSAPProductHierarchy.sql" />
+    <Build Include="002_Schema\Tables\refSAPProductType.sql" />
+    <Build Include="002_Schema\Tables\refStatusCode.sql" />
+    <Build Include="002_Schema\Tables\refSubjectScheme.sql" />
+    <Build Include="002_Schema\Tables\refSupplier.sql" />
+    <Build Include="002_Schema\Tables\refSupplierDiscountType.sql" />
+    <Build Include="002_Schema\Tables\refSupplierPriceType.sql" />
+    <Build Include="002_Schema\Tables\refSupplierRole.sql" />
+    <Build Include="002_Schema\Tables\TradeAlternateIdentifiers.sql" />
+    <Build Include="002_Schema\Tables\TradeCoreAttributes.sql" />
+    <Build Include="002_Schema\Tables\TradeSalesRights.sql" />
+    <Build Include="002_Schema\Tables\TradeSupplierInformation.sql" />
+    <Build Include="002_Schema\Tables\TradeSupplierPricing.sql" />
+    <None Include="003_Data\refCollectionType.sql" />
+    <Build Include="005_StoredProcs\OnixImportUpdateCollections.sql" />
+    <Build Include="002_Schema\Tables\refDiscountCodeMapping.sql" />
+    <Build Include="005_StoredProcs\OnixImportRightsProcess.sql" />
+    <Build Include="005_StoredProcs\usp_refSupplier_GetSuppliers.sql" />
+    <Build Include="001_Permissions\OnixParserAppRole.sql" />
+    <Build Include="005_StoredProcs\usp_TradeDataExport_GetStatus.sql" />
+    <Build Include="005_StoredProcs\usp_TradeDataExport_UpdateStatus.sql" />
+    <Build Include="002_Schema\Tables\TradeDataExport.sql" />
+    <Build Include="001_Permissions\TwrImportAppRole.sql" />
+    <Build Include="001_Permissions\TWRExporterAppRole.sql" />
+    <Build Include="002_Schema\Tables\TWRPricing.sql" />
+    <Build Include="002_Schema\Tables\TWRDiscounts.sql" />
+    <Build Include="002_Schema\Tables\refDiscountEligibilityParameterType.sql" />
+    <Build Include="002_Schema\Tables\refDiscountEligibilityParameterGroup.sql" />
+    <Build Include="002_Schema\Tables\refDiscountType.sql" />
+    <Build Include="002_Schema\Tables\refExportStatus.sql" />
+    <Build Include="002_Schema\Tables\TWRDiscountEligibility.sql" />
+    <None Include="003_Data\refDiscountEligibilityParameterGroup.sql" />
+    <None Include="003_Data\refDiscountEligibilityParameterType.sql" />
+    <None Include="003_Data\refDiscountType.sql" />
+    <None Include="003_Data\refExportStatus.sql" />
+    <Build Include="005_StoredProcs\spTradeDataExport.sql" />
+    <Build Include="005_StoredProcs\spTWRDiscountEligibility.sql" />
+    <Build Include="005_StoredProcs\spTWRDiscounts.sql" />
+    <Build Include="005_StoredProcs\spTWRPricing.sql" />
+    <Build Include="005_StoredProcs\OnixImportLog_UpdateRecords.sql" />
+    <Build Include="002_Schema\Tables\TWRImageUploadResults.sql" />
+    <Build Include="001_Permissions\TwrImageExportAppRole.sql" />
+    <Build Include="002_Schema\Tables\tblLastRunTime.sql" />
+    <Build Include="005_StoredProcs\usp_tblLastRunTime_GetLastRunTime.sql" />
+    <Build Include="005_StoredProcs\usp_tblLastRunTime_UpdateLastRunTime.sql" />
+    <Build Include="005_StoredProcs\usp_TradeDataExport_GetExportedUPCs.sql" />
+    <Build Include="005_StoredProcs\usp_ImageExport_IsImageReadyForUpdate.sql" />
+    <Build Include="005_StoredProcs\usp_ImageExport_ImageSentForUpdate.sql" />
+    <Build Include="002_Schema\Tables\LastRun.sql" />
+    <Build Include="005_StoredProcs\TradeAutoApproval.sql" />
+    <Build Include="005_StoredProcs\usp_ImageExport_ImageSentForCreation.sql" />
+    <Build Include="001_Permissions\TwrImageImportAppRole.sql" />
+    <Build Include="005_StoredProcs\usp_ImageExport_UpdateImageUploadResult.sql" />
+    <Build Include="005_StoredProcs\spUpdateExportedItemStatus.sql" />
+    <None Include="003_Data\TradeClassOfTrade.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\Extensions\Microsoft\SQLDB\Extensions\SqlServer\AzureV12\SqlSchemas\master.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\AzureV12\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+  </ItemGroup>
+</Project>

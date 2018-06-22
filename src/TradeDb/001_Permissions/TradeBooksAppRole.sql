@@ -1,0 +1,1 @@
+﻿CREATE ROLE [TradeBooksApp] AUTHORIZATION [dbo]

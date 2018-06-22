@@ -1,0 +1,12 @@
+CREATE TABLE [dbo].[refExportStatus](
+[ExportStatusCode] [int] NOT NULL,
+[ExportStatus] [varchar](50) NOT NULL,
+CONSTRAINT [PK_refExportStatus] PRIMARY KEY CLUSTERED 
+(
+	[ExportStatusCode] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+	
+GO
+GRANT SELECT, INSERT, UPDATE, DELETE, REFERENCES ON [dbo].[refExportStatus] TO [TWRExporter]
+GO

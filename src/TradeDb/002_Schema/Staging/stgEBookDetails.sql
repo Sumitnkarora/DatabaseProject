@@ -1,0 +1,53 @@
+﻿CREATE TABLE [dbo].[stgEBookDetails]
+(
+	[PID] [decimal](12, 0) NULL,
+	[eBookID] [varchar](36) NOT NULL,
+	[KoboStatus] [smallint] NULL,
+	[Title] [nvarchar](255) NULL,
+	[Updated] [datetime] NULL,
+	[KoboItemPageURL] [varchar](500) NULL,
+	[ActivationDate] [datetime] NULL,
+	[Content] [text] NULL,
+	[KoboContentType] [smallint] NOT NULL,
+	[ISBN] [varchar](50) NULL,
+	[Publisher] [varchar](255) NULL,
+	[FileFormat] [varchar](100) NULL,
+	[FileSize] [int] NULL,
+	[NumberOfChapters] [int] NULL,
+	[Language] [varchar](100) NULL,
+	[IsFiction] [tinyint] NULL,
+	[Monetization] [tinyint] NULL,
+	[PublicationDate] [datetime] NULL,
+	[Rating] [int] NULL,
+	[CoverImageURL] [varchar](500) NULL,
+	[KoboPrice] [money] NULL,
+	[KoboPriceCurrency] [varchar](3) NULL,
+	[ListPrice] [money] NULL,
+	[ListPriceCurrency] [varchar](3) NULL,
+	[DRMFee] [money] NULL,
+	[DRMFeeCurrency] [varchar](3) NULL,
+	[PartnerPrice] [money] NULL,
+	[PartnerPriceCurrency] [varchar](3) NULL,
+	[CostOfGoods] [money] NULL,
+	[CostOfGoodsCurrency] [varchar](3) NULL,
+	[Quality] [int] NULL,
+	[ListPriceCAD] [money] NULL,
+	[AdjustedPriceCAD] [money] NULL,
+	[DRMFeeCAD] [money] NULL,
+	[CostOfGoodsCAD] [money] NULL,
+	[LanguageID] [int] NULL,
+	[PublisherID] [varchar](255) NULL,
+	[ISBNString] [varchar](10) NULL,
+	[ProcessStatus] [tinyint] NOT NULL,
+	[Subtitle] [nvarchar](255) NULL,
+	[IsDeleted] [bit] NULL,
+	[eBookImageId] [varchar](500) NULL,
+	[eBookImageName] [varchar](500) NULL,
+	[MinAge] [int] NULL,
+	[MaxAge] [int] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[stgEBookDetails] ADD  CONSTRAINT [DF_stgEBookDetails_ProcessStatus]  DEFAULT (0) FOR [ProcessStatus]
+GO

@@ -1,0 +1,2 @@
+﻿CREATE ROLE [OnixParserApp] AUTHORIZATION [dbo];
+GO

@@ -1,0 +1,2 @@
+﻿CREATE ROLE [TwrImportApp] AUTHORIZATION [dbo];
+GO

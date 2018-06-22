@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Move Schema" Key="2d0f5923-2078-4ef1-900b-d57767fb2853" ChangeDateTime="12/04/2017 14:56:17">
+    <Property Name="ElementName" Value="[dbo].[refBISACRegionCode]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="1c44de46-4bfc-4e00-b909-7c68a5da231f" ChangeDateTime="12/04/2017 14:56:39">
+    <Property Name="ElementName" Value="[dbo].[tbl_001_ReturnFormats]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="b8467c60-8de4-4b39-8c8a-e63589566e61" ChangeDateTime="12/04/2017 14:57:02">
+    <Property Name="ElementName" Value="[dbo].[tbl_RTK_ProductTypeMap]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="20428358-6ccc-41d8-9676-78bdfbcfb593" ChangeDateTime="12/04/2017 14:57:29">
+    <Property Name="ElementName" Value="[dbo].[tbl_Syme_Catalog_Pending_Changes]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="737d65cb-349f-46f0-99b5-3459c4fd90f7" ChangeDateTime="12/04/2017 14:57:49">
+    <Property Name="ElementName" Value="[dbo].[tbl_syme_catalog_pending_changes_ChangeStatus]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="ba0f8c16-59ef-4a4f-ab1e-582e8c52df02" ChangeDateTime="12/04/2017 14:58:09">
+    <Property Name="ElementName" Value="[dbo].[tbl_Syme_Catalog_Settings]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="36230203-838f-46eb-88e3-3000169c2e2c" ChangeDateTime="12/04/2017 14:58:22">
+    <Property Name="ElementName" Value="[dbo].[tbl_Syme_History]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="e58329b1-154c-417b-ae2e-a0de932eb592" ChangeDateTime="12/04/2017 14:58:38">
+    <Property Name="ElementName" Value="[dbo].[tblActivity]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="a855aff7-b000-4202-95e7-ed7bd8a95f44" ChangeDateTime="12/04/2017 14:59:03">
+    <Property Name="ElementName" Value="[dbo].[tblFailedLogin]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="86e8736a-29e9-4508-8313-5d3a627b41f8" ChangeDateTime="12/04/2017 14:59:19">
+    <Property Name="ElementName" Value="[dbo].[tblSettings]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="62bdb2dd-5346-4380-a20b-7df0d251b58f" ChangeDateTime="12/04/2017 14:59:41">
+    <Property Name="ElementName" Value="[dbo].[tblTool]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="0adbf9db-27ce-4bf6-b30a-390fa928aea2" ChangeDateTime="12/04/2017 14:59:53">
+    <Property Name="ElementName" Value="[dbo].[tblToolGroup]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="b65f5cea-e3c6-4113-8a4d-e8fd26f32fcd" ChangeDateTime="12/04/2017 15:00:14">
+    <Property Name="ElementName" Value="[dbo].[tblToolUser]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="a6032e6b-cff5-4929-a11f-240478e3a056" ChangeDateTime="12/04/2017 15:00:29">
+    <Property Name="ElementName" Value="[dbo].[tblUser]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="cd3fd7f8-0972-42e7-8bfe-0d64bffcfced" ChangeDateTime="12/04/2017 15:00:47">
+    <Property Name="ElementName" Value="[dbo].[tblUserActivityLog]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="7aa926a2-f7de-440d-8964-a26aeaf15074" ChangeDateTime="12/04/2017 15:01:01">
+    <Property Name="ElementName" Value="[dbo].[tblUserSession]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="5eca664d-1fde-4ddd-ae8b-b77cfcbcfc80" ChangeDateTime="12/04/2017 15:16:48">
+    <Property Name="ElementName" Value="[dbo].[fnCalcISBN10CheckDigit]" />
+    <Property Name="ElementType" Value="SqlScalarFunction" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="2c54ea69-6d93-44fa-9fdc-9d82826e3682" ChangeDateTime="12/04/2017 15:17:08">
+    <Property Name="ElementName" Value="[dbo].[fnCalcISBN13CheckDigit]" />
+    <Property Name="ElementType" Value="SqlScalarFunction" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="f244ecde-6a16-454b-b79c-239cb8023fad" ChangeDateTime="12/04/2017 15:17:20">
+    <Property Name="ElementName" Value="[dbo].[fnGetBISACRegionCount ]" />
+    <Property Name="ElementType" Value="SqlScalarFunction" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="50fc3c23-4e2d-46d8-aa8e-54db2a2f1e30" ChangeDateTime="12/04/2017 15:17:35">
+    <Property Name="ElementName" Value="[dbo].[fnISBNtoISBN10]" />
+    <Property Name="ElementType" Value="SqlScalarFunction" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="6e6c02fb-c5ea-4d70-90e8-921bad4116a1" ChangeDateTime="12/04/2017 15:17:47">
+    <Property Name="ElementName" Value="[dbo].[fnISBNtoISBN13]" />
+    <Property Name="ElementType" Value="SqlScalarFunction" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="66f0faa8-3632-4a36-8ff5-943dd0732144" ChangeDateTime="12/04/2017 15:17:59">
+    <Property Name="ElementName" Value="[dbo].[fnPIDToISBN10]" />
+    <Property Name="ElementType" Value="SqlScalarFunction" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="df19ebba-2464-4bd9-97b8-c9d9e5dfdbc4" ChangeDateTime="12/04/2017 15:18:11">
+    <Property Name="ElementName" Value="[dbo].[fnPIDToISBN13]" />
+    <Property Name="ElementType" Value="SqlScalarFunction" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="46c28d9b-3795-4472-b8a7-294eae67310a" ChangeDateTime="12/04/2017 15:18:24">
+    <Property Name="ElementName" Value="[dbo].[fnValidateISBN]" />
+    <Property Name="ElementType" Value="SqlScalarFunction" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="be67f60c-2498-43d4-8676-cfda2d9baa30" ChangeDateTime="12/04/2017 15:22:57">
+    <Property Name="ElementName" Value="[dbo].[sp_Syme_Catalog]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="0ad42c93-c75d-4005-b896-924deb5c0cfa" ChangeDateTime="12/04/2017 15:25:53">
+    <Property Name="ElementName" Value="[dbo].[sp_Syme_InStockPosition]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="2fc14b7f-fbca-4dd5-8d3f-8797463a1294" ChangeDateTime="12/04/2017 15:26:07">
+    <Property Name="ElementName" Value="[dbo].[spAddToolPermissionForUser]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="4d6eb4ef-5e22-48c0-bae3-99a68cac748f" ChangeDateTime="12/04/2017 15:26:20">
+    <Property Name="ElementName" Value="[dbo].[spCHECKARTICLEOWNERSHIP]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="f826a204-d0ae-469e-b0b0-2629583d6dfd" ChangeDateTime="12/04/2017 15:26:34">
+    <Property Name="ElementName" Value="[dbo].[spCheckSecurity]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="21d1a7db-855d-4f88-9d37-88d1193eea06" ChangeDateTime="12/04/2017 15:26:45">
+    <Property Name="ElementName" Value="[dbo].[spDeleteToolPermissionsForUser]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="229ae170-df5b-41db-ba66-ed9da178223f" ChangeDateTime="12/04/2017 15:27:04">
+    <Property Name="ElementName" Value="[dbo].[spDeleteUserSession]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="bf1d7613-caae-4b30-a7b6-3471bef750a6" ChangeDateTime="12/04/2017 15:27:25">
+    <Property Name="ElementName" Value="[dbo].[spFailedLoginLimitReached]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="3a9bb2ce-69fb-4c7f-bb6f-af979ffdf77f" ChangeDateTime="12/04/2017 15:27:42">
+    <Property Name="ElementName" Value="[dbo].[spGetAddUpdateFieldsToDisable]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="f8b3abae-d6ef-4dd2-b211-3b206a460675" ChangeDateTime="12/04/2017 15:29:28">
+    <Property Name="ElementName" Value="[dbo].[spGetAllowedToolList]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="91681c03-873a-4dde-9a83-0ed7b885262e" ChangeDateTime="12/04/2017 15:29:44">
+    <Property Name="ElementName" Value="[dbo].[spGetAudienceCodes]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="6b797765-8819-432c-bc1e-6862e41c770a" ChangeDateTime="12/04/2017 15:29:55">
+    <Property Name="ElementName" Value="[dbo].[spGetAudienceGradeCodes]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="8abaeb25-2912-4cd3-998d-ba81fea817f4" ChangeDateTime="12/04/2017 15:30:09">
+    <Property Name="ElementName" Value="[dbo].[spGetBindingCodes]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="892859ad-cf95-454c-b272-89f9c2c4ae21" ChangeDateTime="12/04/2017 15:30:22">
+    <Property Name="ElementName" Value="[dbo].[spGetBISACRegionCode]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="76c39013-b2be-44c9-beb6-660351eb3b7d" ChangeDateTime="12/04/2017 15:30:53">
+    <Property Name="ElementName" Value="[dbo].[spGetBISACSubjectCodes]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="8940699b-2c63-4b21-be75-64c10d0dddbe" ChangeDateTime="12/04/2017 15:31:04">
+    <Property Name="ElementName" Value="[dbo].[spGetContributorRoles]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="492459c8-c974-4e88-8584-ccc63f2bc55d" ChangeDateTime="12/04/2017 15:31:15">
+    <Property Name="ElementName" Value="[dbo].[spGetCurrencyCodes]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="ded72ecd-ca62-4747-8ef6-77102ed2b06f" ChangeDateTime="12/04/2017 15:50:55">
+    <Property Name="ElementName" Value="[dbo].[spGetDimensionUnits]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="93b4a7a4-0977-4d0f-95ae-900979ecf059" ChangeDateTime="12/04/2017 15:51:07">
+    <Property Name="ElementName" Value="[dbo].[spGetInStockPositionInfoDateSettings]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="468e778d-1b71-485b-88c4-47c4280d4b3b" ChangeDateTime="12/04/2017 15:51:27">
+    <Property Name="ElementName" Value="[dbo].[spGetLanguageNames]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="f1aa4bf1-4179-440d-a426-82e44b49f6bd" ChangeDateTime="12/04/2017 15:53:40">
+    <Property Name="ElementName" Value="[dbo].[spGetListOfToolsForUser]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="cc8348f2-6192-49bf-9bc1-5e3cbf7366f3" ChangeDateTime="12/04/2017 15:53:52">
+    <Property Name="ElementName" Value="[dbo].[spGetMatchingPublishers]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="17f3d06e-14f7-418e-9517-eb5d094ed889" ChangeDateTime="12/04/2017 15:54:05">
+    <Property Name="ElementName" Value="[dbo].[spGetMediaCodes]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="e65685d0-4484-4c9a-8b72-bb9405304349" ChangeDateTime="12/04/2017 15:54:19">
+    <Property Name="ElementName" Value="[dbo].[spGetPendingChangesToVerify]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="3789fcc9-bf6b-424e-af45-5fa833d43183" ChangeDateTime="12/04/2017 15:54:31">
+    <Property Name="ElementName" Value="[dbo].[spGetPositionInfoList]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="99180e1a-f837-48c3-9789-c560cd20f06c" ChangeDateTime="12/04/2017 15:54:42">
+    <Property Name="ElementName" Value="[dbo].[spGetPublisherInfoByName]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="bd304cb9-58b0-4f12-99a2-2fbf00745b24" ChangeDateTime="12/04/2017 15:54:53">
+    <Property Name="ElementName" Value="[dbo].[spGetReplacementCodes]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="91287f83-501a-4fc1-824f-232ec27ea877" ChangeDateTime="12/04/2017 15:55:06">
+    <Property Name="ElementName" Value="[dbo].[spGetReturnFormats]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="4fcecc24-b7a1-4d19-8fd1-2c20f1090810" ChangeDateTime="12/04/2017 15:55:18">
+    <Property Name="ElementName" Value="[dbo].[spGetStatusCodes]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="26e25778-35e5-4fab-81e4-990151e4d990" ChangeDateTime="12/04/2017 15:55:31">
+    <Property Name="ElementName" Value="[dbo].[spGetTitleInformation]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="bdb0ae47-7693-47e2-abc7-0606c6f303f7" ChangeDateTime="12/04/2017 16:00:48">
+    <Property Name="ElementName" Value="[dbo].[spGETUSERIDFROMSESSION]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="f640c0cf-9eca-4baa-8ba0-eae856980db9" ChangeDateTime="12/04/2017 16:01:04">
+    <Property Name="ElementName" Value="[dbo].[spGetUserInfo]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="5175b698-17ec-4069-994b-f36168ff252c" ChangeDateTime="12/04/2017 16:01:25">
+    <Property Name="ElementName" Value="[dbo].[spGetUserInfoByUserID]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="b4c7c354-0204-485f-b777-4dab4f0e055b" ChangeDateTime="12/04/2017 16:01:37">
+    <Property Name="ElementName" Value="[dbo].[spGetUsers]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="3e06d76d-8166-4f33-879b-0c79117e5b2f" ChangeDateTime="12/04/2017 16:03:28">
+    <Property Name="ElementName" Value="[dbo].[spGetVendorISBN]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="08f87141-983e-4ec0-bdff-53740bd8c498" ChangeDateTime="12/04/2017 16:03:40">
+    <Property Name="ElementName" Value="[dbo].[spGetWeightUnits]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="925ea7e5-444f-4740-a9e2-0a3d2b9ae9aa" ChangeDateTime="12/04/2017 16:03:50">
+    <Property Name="ElementName" Value="[dbo].[spHasUserSessionExpired]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="f3dd1710-4b96-4b8f-ae81-fe019bee4321" ChangeDateTime="12/04/2017 16:04:21">
+    <Property Name="ElementName" Value="[dbo].[spInsertPositioninfo]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="8972dbd3-bfcf-4660-8e2f-11091ed1f76c" ChangeDateTime="12/04/2017 16:04:35">
+    <Property Name="ElementName" Value="[dbo].[spInsertTitleChange]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="1f4cfa95-3bca-40be-bc5d-0bf180fd5f6b" ChangeDateTime="12/04/2017 16:04:47">
+    <Property Name="ElementName" Value="[dbo].[spInsertUpdateFailedLogins]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="ae0a6fa0-b05b-46c9-b128-a8dcca54bf4c" ChangeDateTime="12/04/2017 16:05:00">
+    <Property Name="ElementName" Value="[dbo].[spInsertUserActivityLog]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="24f464df-f85f-4e6e-b3e8-ef646a945a22" ChangeDateTime="12/04/2017 16:05:12">
+    <Property Name="ElementName" Value="[dbo].[spInsertUserSession]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="e40d08bc-2e30-4ee8-b3a2-a5d059033b22" ChangeDateTime="12/04/2017 16:05:23">
+    <Property Name="ElementName" Value="[dbo].[spLogin]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="039baeea-b91a-44e0-892c-633829adf9a3" ChangeDateTime="12/04/2017 16:05:35">
+    <Property Name="ElementName" Value="[dbo].[spModifyUserInformation]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="d899240b-11d0-4ab5-8ce7-40622b077f58" ChangeDateTime="12/04/2017 16:05:49">
+    <Property Name="ElementName" Value="[dbo].[spRefreshFailedLogin]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="1214e173-7c52-4212-b067-d1ce3f81c498" ChangeDateTime="12/04/2017 16:06:03">
+    <Property Name="ElementName" Value="[dbo].[spRefreshInStockPosition]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="816ef4a2-f432-4dd3-a215-f1ea513dd8b4" ChangeDateTime="12/04/2017 16:06:13">
+    <Property Name="ElementName" Value="[dbo].[spRefreshUserSession]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="2610df8a-e811-4d44-921b-d7103cd2386d" ChangeDateTime="12/04/2017 16:06:27">
+    <Property Name="ElementName" Value="[dbo].[spUpdatePendingChanges]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="158cf0af-103d-4ea1-bed3-91855af5ccaa" ChangeDateTime="12/04/2017 16:06:43">
+    <Property Name="ElementName" Value="[dbo].[spUpdatePositionInfo]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="707fa843-1294-4433-8a87-da403fa612e2" ChangeDateTime="12/04/2017 16:06:53">
+    <Property Name="ElementName" Value="[dbo].[spUpdateTitleInformation]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="3d321e60-850d-4ffe-9485-5e733b5cf286" ChangeDateTime="12/04/2017 16:07:27">
+    <Property Name="ElementName" Value="[dbo].[spUpdateUserSession]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="452294b7-15e2-4e70-a93b-eb22009d9059" ChangeDateTime="12/04/2017 16:07:39">
+    <Property Name="ElementName" Value="[dbo].[SPUSERHASACCESSTOTOOL]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="ae359b20-b64e-4416-bd13-f0af154af447" ChangeDateTime="12/04/2017 16:08:30">
+    <Property Name="ElementName" Value="[dbo].[spValidateTitleInfo]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="256633f2-ebeb-4659-a605-924e09731e70" ChangeDateTime="12/04/2017 16:08:42">
+    <Property Name="ElementName" Value="[dbo].[uspGetVendorList]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="Syme" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+</Operations>
